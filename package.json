@@ -1,9 +1,8 @@
 {
   "name": "@integirlsinc/integirls.org",
-  "version": "0.0.0",
   "private": true,
-  "license": "ISC",
-  "author": "Mingjie Jiang <m6@berkeley.edu>",
+  "license": "MIT",
+  "author": "Mingjie Jiang (https://github.com/itsmingjie)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
