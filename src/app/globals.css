@@ -1,0 +1,26 @@
+@import "tailwindcss/base";
+@import "@radix-ui/themes/styles.css";
+
+@tailwind components;
+@tailwind utilities;
+
+:is(.dark, .dark-theme)
+  .radix-themes:not(.radix-themes-default-styles, .light, .light-theme) {
+  --slate-12: #edeef0;
+  --slate-a12: rgba(252, 253, 255, 0.936);
+  --color-panel-translucent: var(--gray-a2);
+}
+
+.radix-themes:not(.radix-themes-default-styles):is(.light, .light-theme),
+.radix-themes:not(.radix-themes-default-styles, .dark, .dark-theme) {
+  --slate-12: #2b333b;
+  --slate-a12: rgba(0, 10, 19, 0.832);
+  --color-panel-translucent: hsla(0, 0%, 100%, 0.8);
+}
+
+.radix-themes {
+  --default-font-family: var(--font-inter);
+  --heading-font-family: var(--font-averia);
+  --code-font-family: var(--font-geist-mono);
+  --default-line-height: 1.5;
+}

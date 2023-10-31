@@ -1,0 +1,73 @@
+import {
+  Box,
+  Button,
+  Container,
+  Flex,
+  Heading,
+  Section,
+  Text,
+} from "@radix-ui/themes";
+import { Heart, HelpingHand } from "lucide-react";
+
+export default function Home() {
+  return (
+    <Flex direction="column">
+      <Box
+        className="fixed left-0 top-0 -z-20 h-full w-full"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at top, var(--plum-4), var(--slate-1), var(--color-background))",
+        }}
+      />
+      {/* Hero */}
+      <Section className="relative flex-none py-24">
+        <Container>
+          <Flex align="stretch" direction="column" gap="6">
+            <Flex
+              direction="column"
+              gap="4"
+              align="center"
+              className="text-center"
+            >
+              <Heading
+                size="9"
+                weight="bold"
+                className="max-w-5xl font-extrabold"
+              >
+                Let&rsquo;s close the gender gap in competitive problem solving.
+              </Heading>
+
+              <Text size="4" color="gray" className="max-w-3xl">
+                Integirls is a global nonprofit community of girls dedicated to
+                empowering minoritized gender groups in STEM. We run events like
+                math competitions and puzzle hunts, inspiring thousands of girls
+                to pursue their passions.
+              </Text>
+            </Flex>
+
+            <Flex gap="4" justify="center">
+              <Button variant="classic" size="3">
+                <Heart size={18} /> Get Involved
+              </Button>
+              <Button variant="surface" size="3">
+                <HelpingHand size={18} /> Donate
+              </Button>
+            </Flex>
+          </Flex>
+        </Container>
+      </Section>
+
+      <Section className="text-center">
+        <Heading size="9">Content!</Heading>
+      </Section>
+
+      <Section className="text-center" size="3">
+        <Heading size="9">Content!</Heading>
+      </Section>
+
+      <Section className="text-center">
+        <Heading size="9">Even More Content!</Heading>
+      </Section>
+    </Flex>
+  );
+}
