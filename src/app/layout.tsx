@@ -53,7 +53,9 @@ export default function RootLayout({
           >
             <NavigationBar />
 
-            <main className="relative shrink grow basis-0">{children}</main>
+            <main className="relative shrink grow basis-0 pt-24">
+              {children}
+            </main>
 
             <PagesFooter />
           </Flex>
