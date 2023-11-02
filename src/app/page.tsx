@@ -12,15 +12,16 @@ import { Heart, HelpingHand } from "lucide-react";
 export default function Home() {
   return (
     <Flex direction="column">
-      <Box
-        className="fixed left-0 top-0 -z-20 h-full w-full"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at top, var(--plum-4), var(--slate-1), var(--color-background))",
-        }}
-      />
       {/* Hero */}
-      <Section className="relative flex-none py-24">
+      <Section className="relative flex-none py-36">
+        <Box
+          className="absolute left-0 top-0 -z-20 h-full w-full"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at bottom, var(--plum-4), var(--slate-1), var(--color-background))",
+          }}
+        />
+
         <Container>
           <Flex align="stretch" direction="column" gap="6">
             <Flex

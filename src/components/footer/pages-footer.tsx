@@ -2,7 +2,8 @@ import NextLink from "next/link";
 import { footerAboutMenuConfig } from "@/configs/menus/footer-about";
 import { footerResourcesMenuConfig } from "@/configs/menus/footer-resources";
 import { Container, Flex, Grid, Heading, Link, Text } from "@radix-ui/themes";
-import { HeartHandshake } from "lucide-react";
+
+import { Credit } from "../pieces/credit";
 
 export const PagesFooter = () => (
   <Container className="px-12 pb-8 pt-16">
@@ -45,7 +46,7 @@ export const PagesFooter = () => (
             Code{" "}
             <Link
               color="gray"
-              href="https://www.tldrlegal.com/license/mit-license"
+              href="https://github.com/IntegirlsHQ/integirls.org"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -54,7 +55,7 @@ export const PagesFooter = () => (
             under the{" "}
             <Link
               color="gray"
-              href="https://www.tldrlegal.com/license/mit-license"
+              href="https://github.com/IntegirlsHQ/integirls.org/blob/main/LICENSE"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -68,9 +69,7 @@ export const PagesFooter = () => (
           </Text>
         </Flex>
 
-        <Text color="plum">
-          <HeartHandshake size={16} />
-        </Text>
+        <Credit />
       </Flex>
     </Flex>
   </Container>
