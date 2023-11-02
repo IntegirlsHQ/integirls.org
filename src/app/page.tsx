@@ -1,13 +1,19 @@
+import NextLink from "next/link";
 import {
   Box,
   Button,
+  CalloutIcon,
+  CalloutText,
   Container,
   Flex,
   Heading,
+  Link,
   Section,
   Text,
 } from "@radix-ui/themes";
-import { Heart, HelpingHand } from "lucide-react";
+import { Heart, HelpingHand, Sparkles } from "lucide-react";
+
+import { Banner } from "@/components/pieces/banner";
 
 export default function Home() {
   return (
@@ -30,6 +36,19 @@ export default function Home() {
               align="center"
               className="text-center"
             >
+              <Banner>
+                <CalloutIcon>
+                  <Sparkles size={16} />
+                </CalloutIcon>
+                <CalloutText>
+                  Check out our October Newsletter{" "}
+                  <Link asChild>
+                    <NextLink href="/new-website">here</NextLink>
+                  </Link>
+                  !
+                </CalloutText>
+              </Banner>
+
               <Heading
                 size="9"
                 weight="bold"
