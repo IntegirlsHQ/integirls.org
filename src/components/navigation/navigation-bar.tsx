@@ -6,7 +6,7 @@ import { Logo } from "../branding/logo";
 
 export const NavigationBar = () => {
   return (
-    <Container className="flex-none px-6 py-4">
+    <Container className="fixed top-0 z-50 w-full flex-none px-6 py-4">
       <Flex justify="between" align="center">
         {/* Logo */}
         <Link href="/">

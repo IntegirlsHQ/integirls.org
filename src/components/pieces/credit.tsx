@@ -19,7 +19,7 @@ export const Credit = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2, type: "spring" }}
           >
-            <Text size="1" color="gray" weight="medium">
+            <Text size="1" color="gray" weight="medium" className="select-none">
               Crafted by{" "}
               <Link
                 color="iris"
