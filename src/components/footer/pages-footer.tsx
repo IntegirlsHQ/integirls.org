@@ -1,9 +1,19 @@
 import NextLink from "next/link";
 import { footerAboutMenuConfig } from "@/configs/menus/footer-about";
 import { footerResourcesMenuConfig } from "@/configs/menus/footer-resources";
-import { Container, Flex, Grid, Heading, Link, Text } from "@radix-ui/themes";
+import { socialMediaConfig } from "@/configs/social-media";
+import {
+  Container,
+  Flex,
+  Grid,
+  Heading,
+  IconButton,
+  Link,
+  Text,
+} from "@radix-ui/themes";
 
 import { Credit } from "../pieces/credit";
+import Icon from "../pieces/icon";
 
 export const PagesFooter = () => (
   <Container className="px-12 pb-8 pt-16">
@@ -32,6 +42,35 @@ export const PagesFooter = () => (
               <NextLink href={item.path}>{item.title}</NextLink>
             </Text>
           ))}
+        </Flex>
+
+        <Flex direction="column" gap="3">
+          <Heading size="5">Stay in touch</Heading>
+
+          <Text color="gray">
+            <Link href="mailto:info@integirls.org">info@integirls.org</Link>
+          </Text>
+
+          <Grid
+            columns="4"
+            justify="start"
+            align="start"
+            gap="4"
+            className="max-w-[180px]"
+          >
+            {socialMediaConfig.map((item, index) => (
+              <a
+                href={item.url}
+                key={index}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconButton variant="ghost">
+                  <Icon name={item.icon} size={20} />
+                </IconButton>
+              </a>
+            ))}
+          </Grid>
         </Flex>
       </Grid>
 
